@@ -1,0 +1,93 @@
+@import "../sass/abstracts/variables";
+
+.main-header {
+  background: $secondary-color;
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 99;
+
+  &__logo {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.5rem;
+    display: flex;
+    margin: 0.5rem;
+    @media (max-width: 991px) {
+      display: none;
+    }
+  }
+
+  .logo-toggle {
+    display: flex;
+    align-items: center;
+    margin: 1rem;
+  }
+
+  .main-nav {
+    margin: 0.5rem;
+    &__items {
+      list-style: none;
+      display: flex;
+    }
+
+    &__item {
+      a {
+        text-decoration: none;
+        color: whitesmoke;
+        padding: 1rem;
+        font-weight: bold;
+      }
+    }
+
+    &__item--cta a {
+      color: white;
+      background: $primary-color;
+      padding: 8px 16px;
+      border-radius: 8px;
+
+      &:hover,
+      :active {
+        background: $complementary-color;
+        color: whitesmoke;
+      }
+    }
+
+    @media (max-width: 991px) {
+      display: none;
+    }
+  }
+}
+
+.toggle-button {
+  display: none;
+}
+
+@media (max-width: 991px) {
+  .toggle-button {
+    width: 3rem;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding-top: 0;
+    padding-bottom: 0;
+    vertical-align: middle;
+    display: inline;
+  }
+
+  .toggle-button:focus {
+    outline: none;
+  }
+
+  .toggle-button__bar {
+    width: 100%;
+    height: 0.1rem;
+    background: whitesmoke;
+    display: block;
+    margin: 0.3rem 0;
+  }
+}

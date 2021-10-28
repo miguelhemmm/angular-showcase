@@ -1,0 +1,22 @@
+.main-footer {
+  background: $dark;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.6rem;
+
+  ul {
+    list-style: none;
+    display: flex;
+    li a {
+      color: whitesmoke;
+      text-decoration: none;
+      padding: 0 10px;
+
+      &:hover,
+      :active {
+        color: $gray;
+      }
+    }
+  }
+}

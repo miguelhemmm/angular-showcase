@@ -1,0 +1,25 @@
+<div class="pokemon-grid">
+  <div class="pokemon-grid__card" *ngFor="let pokemon of pokemonList; index as i">
+    <div class="pokemon-grid__card--badge">{{ pokemonImg[i]?.id }}</div>
+    <div class="pokemon-grid__item">
+      <span>{{ pokemon.name }}</span>
+      <img *ngIf="pokemonImg[i]" [src]="pokemonImg[i]?.sprite" [alt]="pokemon.name">
+      <div *ngIf="!pokemonImg[i]" class="lds-ripple">
+        <div></div>
+        <div></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+<div class="buttons">
+  <button class="button" [disabled]="!previousUrl" (click)="previousPokemon()">Prev Pokemon</button>
+  <button class="button" (click)="nextPokemon()">Next Pokemon</button>
+</div>

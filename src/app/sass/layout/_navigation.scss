@@ -1,0 +1,46 @@
+.main-header {
+  width: 100%;
+  background: $secondary-color;
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__logo {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.5rem;
+    display: flex;
+    margin: 0.5rem;
+  }
+
+  .main-nav {
+    margin: 0.5rem;
+    &__items {
+      list-style: none;
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    &__item {
+      a {
+        text-decoration: none;
+        color: whitesmoke;
+        padding: 1rem;
+      }
+    }
+
+    &__item--cta a {
+      color: white;
+      background: $primary-color;
+      padding: 8px 16px;
+      border-radius: 8px;
+
+      &:hover,
+      :active {
+        background: $complementary-color;
+        color: whitesmoke;
+      }
+    }
+  }
+}

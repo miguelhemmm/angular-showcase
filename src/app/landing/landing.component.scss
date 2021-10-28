@@ -1,0 +1,116 @@
+@import "../sass/abstracts/variables";
+@import "../sass/components/buttons";
+
+.card-overlay {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=872&q=80")
+      no-repeat center/cover border-box;
+
+  height: 50vh;
+  padding: 10px;
+  position: relative;
+
+  h1 {
+    position: absolute;
+    top: 5%;
+    left: 1%;
+  }
+}
+
+.section-title {
+  color: $secondary-color;
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#plans {
+  p {
+    text-align: center;
+    font-weight: bold;
+  }
+}
+
+.plans {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  .plan {
+    border: 2px solid $dark;
+    border-radius: 5px;
+    background: $primary-color;
+    text-align: center;
+    padding: 16px;
+    width: 350px;
+    height: 400px;
+    margin: 8px;
+    color: $secondary-color;
+
+    &__features {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+
+      li {
+        margin: 8px 0;
+      }
+    }
+
+    h2 {
+      color: whitesmoke;
+    }
+  }
+
+  .highlighted {
+    background: $secondary-color;
+    color: whitesmoke;
+    box-shadow: 2px 2px 2px 4px rgba(0, 0, 0, 0.5);
+
+    h1:first-child {
+      background: whitesmoke;
+      color: $dark;
+      width: auto;
+      border-radius: 5px;
+      box-shadow: 2px 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+
+    button {
+      border-color: $primary-color;
+    }
+  }
+}
+
+#product-overview h1 {
+  color: white;
+}
+
+.feature-container {
+  background-color: $primary-color;
+
+  .section-title {
+    padding-top: 1.5rem;
+    text-align: center;
+  }
+}
+
+.feature {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+
+  &__image {
+    width: 128px;
+    height: 128px;
+    border: 2px solid $dark;
+    border-radius: 50%;
+    padding: 1.5rem;
+
+    img {
+      width: 100%;
+    }
+  }
+}

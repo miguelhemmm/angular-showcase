@@ -1,0 +1,54 @@
+@import "abstracts/variables";
+@import "components/buttons";
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-family: "Montserrat", sans-serif;
+  margin: 0px;
+  padding: 0px;
+}
+
+.testimonial {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 3rem;
+
+  .testimonial__image-container {
+    width: 50%;
+    min-width: 350px;
+    .testimonial__image {
+      width: 80%;
+      box-shadow: 2px 2px 4px 2px rgba(0, 0, 0, 0.5);
+    }
+  }
+
+  &:nth-of-type(2) {
+    padding-top: 0;
+  }
+}
+
+.testimonial__info {
+  color: $secondary-color;
+  a {
+    color: $primary-color;
+    text-decoration: none;
+  }
+}
+
+.backdrop {
+  background: rgba(0, 0, 0, 0.5);
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  top: 0;
+  right: 0;
+  z-index: 99;
+}

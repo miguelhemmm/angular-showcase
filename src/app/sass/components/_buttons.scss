@@ -1,0 +1,23 @@
+.button {
+  background: $complementary-color;
+  color: whitesmoke;
+  padding: 5px;
+  border: 2px solid $secondary-color;
+  border-radius: 5px;
+  font: inherit;
+  cursor: pointer;
+  font-weight: bold;
+
+  &:hover,
+  :active {
+    background: whitesmoke;
+    color: $primary-color;
+  }
+
+  &:disabled,
+  &[disabled] {
+    border: 1px solid #999999;
+    background-color: #cccccc;
+    color: #666666;
+  }
+}
