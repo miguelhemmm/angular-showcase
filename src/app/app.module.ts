@@ -13,7 +13,10 @@ import { ModalComponent } from './Shared/modal/modal.component';
 import { ClickOutsideDirective } from './Shared/Directives/clickOutside.component';
 import { PokemonGridComponent } from './pokemon-grid/pokemon-grid.component';
 import { SidenavComponent } from './sidenav/sidenav.component';
-import { SignUpFormComponent } from './sign-up-form/sign-up-form.component';
+import { FormComponent } from './Shared/form/form.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { ConvertorPipe } from './Shared/convertor-pipe.pipe';
+import { AboutComponent } from './about/about.component';
 
 @NgModule({
   declarations: [
@@ -27,12 +30,15 @@ import { SignUpFormComponent } from './sign-up-form/sign-up-form.component';
     ClickOutsideDirective,
     PokemonGridComponent,
     SidenavComponent,
-    SignUpFormComponent
+    FormComponent,
+    ConvertorPipe,
+    AboutComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

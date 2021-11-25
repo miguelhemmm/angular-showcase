@@ -1,8 +1,21 @@
+@import "../sass/abstracts/variables";
+
 .container {
-  background: whitesmoke;
-  width: 40vw;
+  background: $secondary-color;
   height: 100vh;
   position: fixed;
   top: 0;
   z-index: 99;
+
+  ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 1rem;
+    gap: 1rem;
+    a {
+      text-decoration: none;
+      color: whitesmoke;
+    }
+  }
 }

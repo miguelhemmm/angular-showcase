@@ -9,7 +9,7 @@
 }
 .lds-ripple div {
   position: absolute;
-  border: 4px solid black;
+  border: 4px solid whitesmoke;
   opacity: 1;
   border-radius: 50%;
   animation: lds-ripple 1s cubic-bezier(0, 0.2, 0.8, 1) infinite;
@@ -34,21 +34,35 @@
   }
 }
 
+.type-span {
+
+  &:nth-child(1)::after {
+    content: ',';
+  }
+
+  &:nth-child(2){
+    margin-left: 0.3rem;
+  }
+
+}
+
 .pokemon-grid {
   display: flex;
+  color: whitesmoke;
   flex-wrap: wrap;
-  margin-top: 1rem;
   gap: 20px;
   justify-content: center;
+  padding: 1rem 0.5rem;
 
   &__card {
-    border: 2px solid black;
+    border: 2px solid $primary-color;
+    background: $primary-opaque;
     border-radius: 5px;
     width: 200px;
     height: 200px;
     display: flex;
     justify-content: center;
-    padding: 2rem;
+    padding: .5rem;
     position: relative;
 
     &--badge {
@@ -64,7 +78,16 @@
     text-align: center;
     font-size: 1.1rem;
     font-weight: bold;
-    width: 100%;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+
+    img:hover {
+      transform: scale(1.2)
+    }
   }
 }
 

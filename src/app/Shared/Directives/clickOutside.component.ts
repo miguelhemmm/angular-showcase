@@ -14,7 +14,11 @@ export class ClickOutsideDirective {
     const clickedInside = this.elementRef.nativeElement.contains(target);
     const backdrop = target.className === 'backdrop';
     const button = target.className.includes('toggle-button');
-    if (!clickedInside && backdrop || !button) {
+    if (!clickedInside && backdrop) {
+      this.clickOutside.emit();
+    }
+
+    if (!target.className) {
       this.clickOutside.emit();
     }
 

@@ -1,15 +1,15 @@
 <app-modal *ngIf="modalOpened">
   <div class="modal" (clickOutside)="toggleModal()">
-    <h3>Do you want to continue?</h3>
+    <h3>You selected the <span style="color: #4979AB;">{{planSelected}} </span>plan, do you want to continue?</h3>
     <div class="buttons">
-      <button class="button" (click)="toggleModal()">Yes</button>
+      <button class="button" (click)="redirect()">Yes</button>
       <button class="button" (click)="toggleModal()">No</button>
     </div>
   </div>
 </app-modal>
 <div class="card-overlay">
   <section id="product-overview">
-    <h1>Get the freedom you deserve.</h1>
+    <h1>Improve your business process.</h1>
   </section>
 </div>
 <h1 class="section-title">Choose Your Plan</h1>
@@ -69,11 +69,11 @@
     </div>
     <div class="feature__image">
       <img src="../../assets/espectador.png" alt="espectador">
+      <span>99.999% Uptime Guarantee</span>
     </div>
-    <p>99.999% Uptime Guarantee</p>
     <div class="feature__image">
       <img src="../../assets/en-todo-el-mundo.png" alt="todomundo">
+      <span>Lightning Fast CDN</span>
     </div>
-    <p>Lightning Fast CDN</p>
   </div>
 </section>

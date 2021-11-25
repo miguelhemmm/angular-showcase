@@ -15,6 +15,8 @@ export class PokemonGridComponent implements OnInit {
   nextUrl: string = '';
   previousUrl: string = '';
   pokemonImg: PokemonImg[] = [];
+  modalOpened: boolean = false;
+  selectedPokemon: any;
 
   ngOnInit(): void {
 
@@ -54,13 +56,25 @@ export class PokemonGridComponent implements OnInit {
           return {
             id: data.id,
             name: data.name,
-            sprite: data.sprites.front_default
+            sprite: data.sprites.front_default,
+            height: data.height,
+            experience: data.base_experience,
+            types: data.types
           }
         }).sort((a, b) => (a.id) - (b.id));
       })
     })
+}
+
+  getPokemonInfo(i: any) {
+    this.modalOpened = true;
+    this.selectedPokemon = this.pokemonImg[i];
+  console.log(this.pokemonImg[i], i)
   }
 
+  close() {
+    this.modalOpened = false;
+  }
 
 }
 

@@ -1,0 +1,101 @@
+
+@import "/src/app/sass/abstracts/variables";
+@import "/src/app/sass/components/buttons";
+
+
+.signup-page {
+  color: whitesmoke;
+  margin: 0;
+  padding: 2rem 0;
+}
+
+.signup-title {
+color: whitesmoke;
+text-align: center;
+margin: 0;
+padding: 1rem 0;
+}
+
+.signup-form {
+
+display: flex;
+flex-direction: column;
+align-items: center;
+gap: 1rem;
+width: 100vw;
+
+  .input-text,
+  .input-select {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    gap: 5px;
+
+    label {
+      font-weight: bold;
+      color: $primary-color;
+    }
+
+    input,
+    select {
+      border: 1.5px solid #ccc;
+      border-radius: 5px;
+      padding: 5px;
+
+      &:focus:not(select) {
+       outline: none;
+       background: $primary-opaque;
+       border-color: $primary-color;
+      }
+    }
+
+    @media (max-width: 991px) {
+      width: 80%;
+    }
+  }
+
+
+  // select[id*=title] { //Trying attribute selector with id
+  //   margin-left: 1rem;
+  // }
+
+  .input-checkbox {
+    display: flex;
+    align-items: center;
+
+    a {
+      text-decoration: none;
+      color: $primary-color;
+    }
+  }
+
+  input[type="checkbox"] { //Trying attribute selector with type
+    // margin-right: 0.5rem;
+    // appearance: none;
+    // border: 1.5px solid #ccc;
+    // width: 1rem;
+    // height: 1rem;
+    cursor: pointer;
+  }
+
+  input[type="checkbox"]:checked  {
+    border: 1.5px solid $secondary-color;
+    filter: hue-rotate(205deg);
+  }
+
+  button {
+    // align-self: center;
+    width: 250px;
+  }
+
+  input:-webkit-autofill {
+    -webkit-box-shadow:0 0 0 50px $primary-opaque inset; /* Change the color to your own background color */
+    box-shadow: 0 0 0 50px $primary-opaque inset;
+    border-color: $secondary-color;
+}
+
+input:-webkit-autofill:focus {
+    -webkit-box-shadow: 0 0 0 50px $primary-opaque inset;/*your box-shadow*/
+    box-shadow:  0 0 0 50px $primary-opaque inset;
+}
+}

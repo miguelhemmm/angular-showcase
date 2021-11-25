@@ -8,6 +8,7 @@ export class UIService {
 
 
   openSideNav = new Subject();
+  openPokeInfo = new Subject();
   constructor() { }
 
 

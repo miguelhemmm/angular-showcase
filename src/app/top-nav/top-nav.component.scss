@@ -2,12 +2,13 @@
 
 .main-header {
   background: $secondary-color;
-  display: inline-flex;
+  display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
   position: sticky;
   top: 0;
+  max-height: 67px;
   z-index: 99;
 
   &__logo {
@@ -25,7 +26,9 @@
   .logo-toggle {
     display: flex;
     align-items: center;
-    margin: 1rem;
+    @media (max-width: 991px) {
+      padding: 1rem;
+    }
   }
 
   .main-nav {
@@ -41,6 +44,11 @@
         color: whitesmoke;
         padding: 1rem;
         font-weight: bold;
+
+        &:hover {
+          color: $primary-color;
+          font-size: 1.1rem;
+        }
       }
     }
 
@@ -61,6 +69,10 @@
       display: none;
     }
   }
+
+  &:hover {
+    background: $secondary-color;
+  }
 }
 
 .toggle-button {
@@ -69,7 +81,7 @@
 
 @media (max-width: 991px) {
   .toggle-button {
-    width: 3rem;
+    width:2.5rem;
     background: transparent;
     border: none;
     cursor: pointer;
@@ -85,7 +97,7 @@
 
   .toggle-button__bar {
     width: 100%;
-    height: 0.1rem;
+    height: 0.2rem;
     background: whitesmoke;
     display: block;
     margin: 0.3rem 0;

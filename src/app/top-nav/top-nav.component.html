@@ -1,7 +1,7 @@
-<header class="main-header">
+<header (mouseover)='hover("over")' (mouseout)='hover("out")' class="main-header">
   <div class="logo-toggle">
     <a routerLink="/home" class="main-header__logo">
-      uHost
+<img src="https://raw.githubusercontent.com/miguelhemmm/Desarrollo-Web/gh-pages/Im%C3%A1genes/logo-web3.png" alt="logo" height="50px"/>
     </a>
     <button class="toggle-button main-nav__item" (click)="openSidenav()">
       <span class="toggle-button__bar"></span>
@@ -12,6 +12,9 @@
   <nav class="main-nav">
     <ul class="main-nav__items">
       <li class="main-nav__item">
+        <a routerLink="/about">About</a>
+      </li>
+      <li class="main-nav__item">
         <a routerLink="/packages">Packages</a>
       </li>
       <li class="main-nav__item">
@@ -21,7 +24,7 @@
         <a routerLink="/pokemon">Pokemons</a>
       </li>
       <li class="main-nav__item main-nav__item--cta">
-        <a href="start-hosting/index.html">Start Hosting</a>
+        <a routerLink="/signup">Sign Up</a>
       </li>
     </ul>
   </nav>

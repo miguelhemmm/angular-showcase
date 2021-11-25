@@ -4,6 +4,9 @@ import { CustomersComponent } from './customers/customers.component';
 import { LandingComponent } from './landing/landing.component';
 import { PackagesComponent } from './packages/packages.component';
 import { PokemonGridComponent } from './pokemon-grid/pokemon-grid.component';
+import { FormComponent } from './Shared/form/form.component';
+import { AboutComponent } from './about/about.component';
+
 
 const routes: Routes = [
   {path: '', redirectTo: '/home', pathMatch: 'full'},
@@ -11,6 +14,8 @@ const routes: Routes = [
   {path: 'packages', component: PackagesComponent},
   {path: 'customers', component: CustomersComponent},
   {path: 'pokemon', component: PokemonGridComponent},
+  { path: 'signup', component: FormComponent },
+  {path: 'about', component: AboutComponent},
 
 ];
 

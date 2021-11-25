@@ -1,0 +1,38 @@
+@import "/src/app/sass/abstracts/variables";
+@import "/src/app/sass/components/buttons";
+
+.about-container {
+display: flex;
+justify-content: center;
+align-items: center;
+
+  &__main {
+    width: 90vw;
+    height: auto;
+    background: $primary-color;
+
+    &--title {
+      text-align: center;
+    }
+  }
+
+  .paragraph-section {
+    font-size: 1.3rem;
+    text-align: center;
+    display: flex;
+    flex-flow: column wrap;
+    padding: 2rem;
+    p {
+      margin: 0;
+      padding: 0
+    }
+    ol {
+      list-style-type: none;
+      margin: 0;
+      padding: 0.5rem;
+    }
+    @media (max-width: 991px) {
+      font-size: 1.1rem;
+    }
+  }
+}

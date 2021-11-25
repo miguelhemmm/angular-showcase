@@ -4,8 +4,9 @@
   background: $dark;
   display: flex;
   align-items: center;
+  min-height:100px;
   justify-content: center;
-  padding: 1.6rem;
+  margin-top:auto;
 
   ul {
     list-style: none;

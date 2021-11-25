@@ -1,0 +1,52 @@
+<main class="signup-page">
+  <h1 class="signup-title">Awesome! Let's dive right in!</h1>
+  <form [formGroup]="registerForm" action="index.html" class="signup-form" (ngSubmit)="onSubmit($event)">
+    <div class="input-select">
+      <label for="title">Title</label>
+      <select id="title"  required  formControlName="title">
+          <option value="mr">Mr.</option>
+          <option value="ms">Ms.</option>
+      </select>
+    </div>
+      <div class="input-text">
+        <label for="first-name">First name</label>
+        <input type="text" id="first-name" required  formControlName="firstName">
+      </div>
+      <div class="input-text">
+        <label for="last-name">Last name</label>
+        <input type="text" id="last-name" required  formControlName="lastName">
+      </div>
+      <div class="input-text">
+        <label for="email">E-Mail</label>
+        <input type="email" id="email" required  formControlName="email">
+        <span
+        *ngIf="registerForm.controls.email.touched && registerForm.controls.email.status === 'INVALID'"
+        class="error">Must be a valid Email.
+      </span>
+      </div>
+      <div class="input-text">
+        <label for="password">Password</label>
+        <input  type="password" id="password" required  formControlName="password">
+        <span
+        *ngIf="registerForm.controls.password.touched && registerForm.controls.password.status === 'INVALID'"
+        class="error">Password must contain at least 8 characters, 1 upper case, 1 number and 1 special character.
+      </span>
+      </div>
+      <div class="input-text">
+        <label for="confirm">Password</label>
+        <input  type="password" id="confirm" required  formControlName="confirm">
+        <span
+        *ngIf="registerForm.controls.confirm.touched && registerForm.controls.confirm.value !== registerForm.controls.password.value"
+        class="error">
+        The password and confirmation password do not match.
+      </span>
+      </div>
+      <div class="input-checkbox">
+        <input type="checkbox" id="agree-terms" required formControlName="termsAgree">
+        <label for="agree-terms">Agree to
+            <a href="#">Terms &amp; Conditions</a>
+        </label>
+      </div>
+      <button type="submit" class="button" [disabled]="!registerForm.valid">Sign Up</button>
+  </form>
+</main>

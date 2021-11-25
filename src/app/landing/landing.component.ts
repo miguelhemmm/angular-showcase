@@ -1,4 +1,5 @@
 import { AfterContentInit, Component, ElementRef, OnInit, Renderer2, ViewChild } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-landing',
@@ -8,8 +9,9 @@ import { AfterContentInit, Component, ElementRef, OnInit, Renderer2, ViewChild }
 export class LandingComponent implements OnInit, AfterContentInit {
 
   modalOpened: boolean = false;
+  planSelected: string | undefined = '';
 
-  constructor(private renderer: Renderer2) { }
+  constructor(private renderer: Renderer2, private router: Router) { }
 
   ngOnInit(): void {
 
@@ -19,8 +21,12 @@ export class LandingComponent implements OnInit, AfterContentInit {
   }
 
   toggleModal(plan?: string) {
-    console.log('opened: ', plan)
+    this.planSelected = plan;
     this.modalOpened = !this.modalOpened;
+  }
+
+  redirect() {
+    this.router.navigate(['signup']);
   }
 
 }
