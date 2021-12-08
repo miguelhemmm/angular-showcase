@@ -1,5 +1,10 @@
-import { Component, OnInit, enableProdMode } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
+import { Store } from '@ngrx/store';
+import { addUser } from '../../state/stateActions.actions';
+import { User } from '../models';
+import { UIService } from '../ui.service';
 
 @Component({
   selector: 'app-form',
@@ -8,11 +13,11 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
 })
 export class FormComponent implements OnInit {
 
-  constructor() { }
   pattern = "^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$";
   registerForm: any = {};
+  userPicture: string | undefined = '';
 
-
+  constructor(private store: Store, private uiService: UIService, private router: Router) { }
 
   ngOnInit(): void {
 
@@ -29,15 +34,28 @@ export class FormComponent implements OnInit {
 
     })
 
-    // this.registerForm.valueChanges.subscribe((data: any) => {
-    //   console.log('data: ', this.registerForm.controls)
-    // })
+
 
   }
 
   onSubmit(event: any) {
+    this.uiService.getUsers().subscribe(userData => {
+      this.userPicture = userData.picture;
+    })
 
-    console.log('form: ', this.registerForm.value)
+    const form: any = this.registerForm.value;
+    const user: User = {
+      name: form.firstName,
+      lastName: form.lastName,
+      email: form.email,
+      id: (Math.random() * 10).toString(),
+      password: form.password,
+      picture: this.userPicture
+    }
+
+    this.store.dispatch(addUser({ user }))
+
+    this.router.navigate(['/customers'])
   }
 
 }

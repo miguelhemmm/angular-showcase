@@ -1,7 +1,7 @@
 import { Component, ElementRef, OnInit, HostListener } from '@angular/core';
 import { Observable, fromEvent } from 'rxjs';
 import { debounceTime, throttleTime } from 'rxjs/operators';
-import { UIService } from '../Shared/ui.service';
+import { UIService } from '../ui.service';
 
 @Component({
   selector: 'app-top-nav',
@@ -19,7 +19,7 @@ export class TopNavComponent implements OnInit {
   onScroll(event: any) {
     const nav = this.elementRef.nativeElement.children;
     this.onTop = window.pageYOffset < nav[0].clientHeight;
-    nav[0].style.background = window.pageYOffset > nav[0].clientHeight ? 'linear-gradient(#090910, #09091033)' : '#090910';
+    nav[0].style.background = window.pageYOffset > nav[0].clientHeight ? 'linear-gradient(#090910, rgb(9, 9, 16, .05))' : '#090910';
   }
 
 

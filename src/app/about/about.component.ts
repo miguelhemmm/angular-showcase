@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { UIService } from '../Shared/ui.service';
 
 @Component({
   selector: 'app-about',
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AboutComponent implements OnInit {
 
-  constructor() { }
+  constructor(private uiService: UIService) { }
 
   ngOnInit(): void {
   }
 
+  getCoins() {
+    this.uiService.getCoins().subscribe(data => {
+      console.log(data)
+    })
+  }
 }

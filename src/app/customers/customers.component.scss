@@ -1,6 +1,44 @@
 @import "../sass/abstracts/variables";
 @import "../sass/components/buttons";
 
+
+.customer-info {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 1rem;
+  padding: 1rem;
+
+  &__user {
+    border: 2px solid $primary-color;
+    border-radius: 20px;
+    display: flex;
+    flex-flow: column wrap;
+    padding: 1rem;
+    min-width: 300px;
+    background: whitesmoke;
+
+    .button {
+      width: 150px;
+      align-self: center;
+    }
+
+    &--picture {
+      align-self: center;
+      border: 2px solid $primary-color;
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      overflow: hidden;
+
+      img {
+        width: 100%;
+      }
+
+    }
+  }
+
+}
+
 .testimonial {
   display: flex;
   flex-wrap: wrap;

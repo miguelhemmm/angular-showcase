@@ -1,5 +1,5 @@
 <main>
-  <div>
+  <!-- <div>
     <div class="testimonial" id="customer-1">
       <div class="testimonial__image-container">
         <img src="../assets/customer-1.jpg" alt="Mike Statham - Customer" class="testimonial__image">
@@ -26,6 +26,19 @@
       <div class="testimonial__image-container">
         <img src="../assets/customer-2.jpg" alt="John Mellow - Customer" class="testimonial__image">
       </div>
+    </div>
+  </div> -->
+  <button (click)="onAdd()" class="button">Get User</button>
+  <button (click)="signUp()" class="button">Sign Up</button>
+  <div class="customer-info">
+    <div class="customer-info__user" *ngFor="let user of users$ | async" >
+      <div class="customer-info__user--picture">
+        <img  [src]="user.picture" alt="picture">
+      </div>
+      <p>Name: {{user.name}}</p>
+      <p>Lastname: {{user.lastName}}</p>
+      <p>{{user.email}}</p>
+      <button class="button" (click)="onRemove(user)">Remove User</button>
     </div>
   </div>
 </main>

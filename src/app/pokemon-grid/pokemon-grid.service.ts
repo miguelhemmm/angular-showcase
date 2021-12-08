@@ -30,14 +30,3 @@ export class PokemonGridService {
     return this.http.get(`https://pokeapi.co/api/v2/pokemon/${pokenum}`);
   }
 }
-
-export interface PokemonOverall {
-  name: string;
-  url: string;
-}
-export interface PokeList {
-  count: number;
-  next: string;
-  previous: string;
-  results: Array<PokemonOverall>
-}

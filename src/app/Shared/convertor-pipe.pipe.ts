@@ -1,11 +1,11 @@
 import { Pipe, PipeTransform } from '@angular/core';
 
 @Pipe({
-  name: 'convertorPipe'
+  name: 'convertor'
 })
 export class ConvertorPipe implements PipeTransform {
 
-  transform(value: number, type: string = 'none'): string {
+  transform(value: number, type: string): string {
     let finalValue = '';
     switch (type) {
       case 'feetToMeter':
@@ -13,6 +13,9 @@ export class ConvertorPipe implements PipeTransform {
         break;
       case 'cmToMeter':
         finalValue = (value / 10).toFixed(1);
+        break;
+      default:
+        finalValue = value.toString();
     }
     return finalValue
   }

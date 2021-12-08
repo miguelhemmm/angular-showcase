@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-modal',
-  styleUrls: ['./modal.component.scss'],
+  styles: [``],
   template: `
   <div class="backdrop"></div>
 <ng-content (clickOutside)="closeModal()"></ng-content>
@@ -10,7 +10,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ModalComponent implements OnInit {
 
-  constructor() { }
+  constructor() {}
 
   ngOnInit(): void {
   }

@@ -1,12 +1,12 @@
 <app-modal *ngIf="modalOpened">
   <div class="modal" (clickOutside)="close()">
-<p>Height: {{ selectedPokemon.height | convertorPipe:'cmToMeter' }} m.</p>
+<p>Height: {{ selectedPokemon.height | convertor:'cmToMeter' }} m.</p>
 <p>Base Experience: {{ selectedPokemon.experience }}</p>
-<div>
+<p>
   Type: <span [ngClass]="{'type-span': selectedPokemon.types.length > 1}" *ngFor="let type of selectedPokemon.types;">
     <span>{{ type.type.name }}</span>
   </span>
-</div>
+</p>
   </div>
 </app-modal>
 

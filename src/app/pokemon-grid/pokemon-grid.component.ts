@@ -1,6 +1,7 @@
+import { PokemonOverall, PokeList } from './../Shared/models';
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
-import { PokeList, PokemonGridService, PokemonOverall } from './pokemon-grid.service';
+import { PokemonGridService } from './pokemon-grid.service';
 
 @Component({
   selector: 'app-pokemon-grid',

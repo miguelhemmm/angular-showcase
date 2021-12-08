@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { UIService } from '../Shared/ui.service';
+import { UIService } from '../ui.service';
 
 @Component({
   selector: 'app-sidenav',
