@@ -1,6 +1,4 @@
 import { Component, ElementRef, OnInit, HostListener } from '@angular/core';
-import { Observable, fromEvent } from 'rxjs';
-import { debounceTime, throttleTime } from 'rxjs/operators';
 import { UIService } from '../ui.service';
 
 @Component({

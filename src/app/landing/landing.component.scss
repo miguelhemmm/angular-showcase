@@ -34,11 +34,12 @@
 .plans {
   display: flex;
   justify-content: center;
+  align-items: center;
   flex-wrap: wrap;
 
   .plan {
-    border: 2px solid $primary-color;
-    border-radius: 5px;
+    border: 2px solid $secondary-color;
+    border-radius: 50px;
     background: $primary-color;
     text-align: center;
     padding: 16px;
@@ -63,7 +64,10 @@
   }
 
   .highlighted {
+    order: 0;
+    border-color: $primary-color;
     background: $secondary-color;
+    height: 450px;
     color: whitesmoke;
     box-shadow: 2px 2px 2px 4px rgba(0, 0, 0, 0.5);
 
@@ -98,7 +102,6 @@
 }
 
 .feature {
-  list-style: none;
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
@@ -111,7 +114,7 @@
     img {
       width: 150px;
       display: block;
-      margin: 2rem auto;
+      margin: 0.5rem auto;
     }
 
     span {
