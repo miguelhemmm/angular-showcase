@@ -21,6 +21,7 @@ import { StoreModule } from '@ngrx/store';
 import { reducers, metaReducers } from './reducers';
 import { addRemoveReducer } from './state/addRemove.reducer';
 import { retrieveUsersReducer } from './state/retrieveUsersReducer.reducer';
+import { GalleryGridComponent } from './gallery-grid/gallery-grid.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { retrieveUsersReducer } from './state/retrieveUsersReducer.reducer';
     SidenavComponent,
     FormComponent,
     ConvertorPipe,
-    AboutComponent
+    AboutComponent,
+    GalleryGridComponent
   ],
   imports: [
     BrowserModule,

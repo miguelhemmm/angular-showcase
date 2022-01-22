@@ -6,6 +6,7 @@ import { PackagesComponent } from './packages/packages.component';
 import { PokemonGridComponent } from './pokemon-grid/pokemon-grid.component';
 import { FormComponent } from './Shared/form/form.component';
 import { AboutComponent } from './about/about.component';
+import { GalleryGridComponent } from './gallery-grid/gallery-grid.component';
 
 
 const routes: Routes = [
@@ -16,6 +17,7 @@ const routes: Routes = [
   {path: 'pokemon', component: PokemonGridComponent},
   { path: 'signup', component: FormComponent },
   {path: 'about', component: AboutComponent},
+  {path: 'gallery', component: GalleryGridComponent},
 
 ];
 
