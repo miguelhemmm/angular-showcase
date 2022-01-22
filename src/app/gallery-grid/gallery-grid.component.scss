@@ -1,0 +1,29 @@
+.container {
+  display: grid;
+  margin: 1rem;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 5rem 25rem 10rem;
+  gap: 1rem;
+}
+
+
+.el1 {
+  background: #FF6363;
+  grid-column: 1 / span 4; // it's the same as 1 / 5
+}
+
+.el2 {
+  background: #FFAB76;
+  grid-row: 2 / 4;
+}
+
+.el3 {
+  background: #FFFDA2;
+  grid-row: 2 / 4;
+  grid-column: 2 / span 3;
+}
+
+.el4 {
+  background: #BAFFB4;
+  grid-column: 1 / span 4;
+}
